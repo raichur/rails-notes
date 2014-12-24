@@ -1,3 +1,59 @@
-// Place all the styles related to the Notes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  font-family: Palatino;
+}
+html, body, form, .note_content {
+  height: 100%;
+}
+body {
+  background: $gray-light;
+  margin-left: 25%;
+  margin-right: 25%;
+  color: $gray;
+}
+
+header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  a {
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+}
+.timeago {
+  margin-top: -10px;
+  font-size: 1rem;
+}
+a {
+  color: $gray;
+  transition: 200ms color ease;
+  &:hover {
+    color: $theme-color;
+  }
+}
+p {
+  font-size: 1.3rem;
+}
+.input {
+  label {
+    opacity: .5;
+    display: block;
+  }
+  input {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+}
+input, textarea, .note_content {
+  outline: 0;
+  border: 0;
+  background: 0;
+  width: 100%;
+}
+.note_content, textarea {
+  height: 80%;
+}
+textarea:focus, input:focus{
+  outline: 0;
+}
