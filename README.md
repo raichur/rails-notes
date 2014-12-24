@@ -2,7 +2,7 @@
 
 A simple note-taking app build with Ruby on Rails. 
 
-[View it live](http://simplerailsnotes.herokuapp.com) on Heroku.
+[View it live](http://simplerailsnotes.herokuapp.com) on Heroku. Use the email: _email@example.com_ and password: _examplepassword_ to sign in.
 
 ### Setup:
 
