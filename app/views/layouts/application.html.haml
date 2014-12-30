@@ -10,7 +10,7 @@
 
   %header
     - if user_signed_in?
-      = link_to "Home", root_path, id: "logo"
+      = link_to "Notes", root_path, id: "logo"
       = link_to "New Note", new_note_path, id: "new_note_btn"
       = link_to "Sign Out", destroy_user_session_path, method: :delete, id: "sign_out"
     - else

@@ -6,11 +6,41 @@ html, body, form, .note_content {
 }
 body {
   background: $gray-light;
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 20%;
+  margin-right: 20%;
   color: $gray;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
 header {
   width: 100%;
   display: block;
@@ -27,7 +57,7 @@ header {
 }
 a {
   color: $gray;
-  transition: 200ms all ease;
+  transition: 200ms color ease;
   text-decoration: none;
   font-weight: 600;
   &:hover {
@@ -53,13 +83,11 @@ input, textarea, .note_content {
   border: 0;
   background: 0;
   width: 100%;
-  overflow-y: scroll;
-  overflow-x: none;
   margin: 0;
   padding: 0;
 }
 .note_content, textarea {
-  height: 80%;
+  height: 600px;
 }
 textarea:focus, input:focus{
   outline: 0;
@@ -75,19 +103,21 @@ textarea:focus, input:focus{
   font-weight: 700;
   background: $gray;
   font-size: 2rem;
-  margin-top: -80px;
   padding-top: 10px;
+  margin-top: 20px;
   padding-bottom: 10px;
   color: white;
-  transition: 300ms all ease;
+  transition: 300ms color ease;
   &:hover {
     background: $theme-color;
   }
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 #logo {
   text-align: left;
+  text-transform: uppercase;
+  font-size: 1.7rem;
 }
 #new_note_btn, #sign_out {
   float: right;
@@ -100,17 +130,17 @@ textarea:focus, input:focus{
   padding: 6px;
   margin-top: -6px;
   color: white;
-  transition: 300ms all ease;
+  transition: 300ms color ease;
   &:hover {
     background: $theme-color;
   }
 }
 #note_opt {
-  margin-top: 40px;
-  margin-bottom: 20px;
   text-align: right;
+  margin-bottom: 30px;
+  bottom: 30px;
   opacity: .8;
-  transition: all ease .3s;
+  transition: color ease .3s;
   &:hover {
     opacity: 1;
   }
