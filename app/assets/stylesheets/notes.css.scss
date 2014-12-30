@@ -12,12 +12,13 @@ body {
 }
 
 header {
+  width: 100%;
+  display: block;
   margin-top: 40px;
   margin-bottom: 40px;
-  text-align: center;
+  text-align: left;
   a {
-    margin-right: 2px;
-    margin-left: 2px;
+    margin-right: 15px;
   }
 }
 .timeago {
@@ -26,7 +27,9 @@ header {
 }
 a {
   color: $gray;
-  transition: 200ms color ease;
+  transition: 200ms all ease;
+  text-decoration: none;
+  font-weight: 600;
   &:hover {
     color: $theme-color;
   }
@@ -50,6 +53,10 @@ input, textarea, .note_content {
   border: 0;
   background: 0;
   width: 100%;
+  overflow-y: scroll;
+  overflow-x: none;
+  margin: 0;
+  padding: 0;
 }
 .note_content, textarea {
   height: 80%;
@@ -59,4 +66,45 @@ textarea:focus, input:focus{
 }
 #note_content {
   font-size: 1.4rem;
+  padding: 0;
+  margin: 0;
 }
+
+.btn {
+  width: 100%;
+  font-weight: 700;
+  background: $gray;
+  font-size: 2rem;
+  margin-top: -80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  transition: 300ms all ease;
+  &:hover {
+    background: $theme-color;
+  }
+  margin-bottom: 50px;
+}
+
+#logo {
+  text-align: left;
+}
+#new_note_btn, #sign_out {
+  float: right;
+}
+
+#new_note_btn {
+  font-weight: 700;
+  background: $gray;
+  font-size: 1.1rem;
+  padding: 6px;
+  margin-top: -6px;
+  color: white;
+  transition: 300ms all ease;
+  &:hover {
+    background: $theme-color;
+  }
+}
+
+
+// Media Queries
