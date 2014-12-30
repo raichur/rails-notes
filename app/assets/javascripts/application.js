@@ -14,3 +14,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function wordCount() {
+  if(document.getElementById('note_content').value !== 0) {
+    var text = document.getElementById('note_content').value;
+    var countElement = document.getElementById('word_count');
+    var count = 0;
+    for (var i = 1; i < text.length; i++) {
+      if (text.charAt(i) == " ") {
+        count ++;
+      }
+    }
+    if(count + 1 == 1){
+      countElement.innerHTML = count + 1 + ' word';
+    } else {
+      countElement.innerHTML = count + 1 + ' words';
+    }
+
+  } else {
+    countElement.innerHTML = '0 words';
+  }
+}

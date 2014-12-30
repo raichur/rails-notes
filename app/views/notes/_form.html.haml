@@ -1,4 +1,5 @@
 = simple_form_for @note do |f|
    = f.input :title
-   = f.input :content
+   <div id="word_count" style="float: right;color: #9C9C9C;">0</div>
+   = f.input :content, input_html: { oninput: 'wordCount()', onpropertychange: 'wordCount()', onkeyup: 'wordCount()' }
    = f.button :submit

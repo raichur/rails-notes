@@ -1,5 +1,5 @@
 * {
-  font-family: Palatino;
+  font-family: 'Helvetica Neue', 'Georgia';
 }
 html, body, form, .note_content {
   height: 100%;
@@ -56,4 +56,7 @@ input, textarea, .note_content {
 }
 textarea:focus, input:focus{
   outline: 0;
+}
+#note_content {
+  font-size: 1.4rem;
 }
